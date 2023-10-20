@@ -45,6 +45,9 @@
         <link rel="stylesheet" href="plugins/hover/hover-min.css">
         <!-- template main css file -->
         <link rel="stylesheet" href="css/style.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        
     </head>
     <body>
 
@@ -125,19 +128,79 @@ Slider Section Start
           <section class="cd-intro">
             <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s">
               <span>Revords</span><br>
-              <span class="cd-words-wrapper">
+              <!-- <span class="cd-words-wrapper">
                 <b class="is-visible">Demo1</b>
                 <b>Demo2</b>
                 <b>Demo3</b>
-              </span>
+              </span> -->
             </h1>
           </section> <!-- cd-intro -->
           <!-- /.slider -->
+          <div class="section-heading"></div>
           <h2 class="wow fadeInUp animated" data-wow-delay=".6s">
-           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus enim ex dolores libero sequi nostrum iure quas qui blanditiis cupiditate fugit, laudantium iste fugiat neque id pariatur. Accusantium, fugiat illo.
+          One Stop Customer Loyalty Program <br>
+          Turn visitors into happy, loyal customers by digitizing your business’ rewards program!
+
           </h2>
-          <a class="btn-lines dark light wow fadeInUp animated btn btn-default btn-green hvr-bounce-to-right"
-            data-wow-delay=".9s" href="" >Download More</a>
+            <!-- <a class="btn-lines dark light wow fadeInUp animated btn btn-default btn-green hvr-bounce-to-right"
+              data-wow-delay=".9s" href="" >Learn More</a> -->
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Learn More
+            </button>
+
+              <!-- Modal -->
+              <div class="modal fade" style="z-index: 10000;" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="">
+                        <div class="mb-3">
+                          <label for="fname" class="form-label">First Name</label>
+                          <input type="text" class="form-control" id="fname" placeholder="First Name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="lname" class="form-label">Last Name</label>
+                          <input type="text" class="form-control" id="lname" placeholder="Last Name"></input>
+                        </div>
+                        <div class="mb-3">
+                          <label for="phone" class="form-label">Mobile Number</label>
+                          <input type="text" class="form-control" id="phone" placeholder="e.g.: 9876543210"></input>
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" placeholder="e.g.: demo@gmail.com"></input>
+                        </div>
+                        <div class="mb-3">
+                          <label for="business" class="form-label">business</label>
+                          <input type="text" class="form-control" id="business" placeholder="e.g.: My Business LLP"></input>
+                        </div>
+                        <div class="mb-3">
+                          <label for="zip" class="form-label">business</label>
+                          <input type="text" class="form-control" id="zip" placeholder="zip code"></input>
+                        </div>
+                        <div class="mb-3">
+                          <label for="submit" class="form-label">Submit</label>
+                          <input type="button" class="form-control" id="submit" placeholder="Submit">Submit</input>
+                        </div>
+                        
+                        
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      
+                      <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
         </div>
       </div>
     </div>
@@ -149,7 +212,7 @@ Slider Section Start
 ==================================================
 About Section Start
 ================================================== -->
-<section id="about">
+<!-- <section id="about">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-sm-6">
@@ -174,7 +237,8 @@ About Section Start
       </div>
     </div>
   </div>
-</section> <!-- /#about -->
+</section>  -->
+<!-- /#about -->
 
 
 <!--
@@ -185,146 +249,146 @@ Portfolio Section Start
   <div class="container">
     <div class="section-heading">
       <h1 class="title wow fadeInDown" data-wow-delay=".3s">Why Revords </h1>
-      <p class="wow fadeInDown" data-wow-delay=".5s">
+      <!-- <p class="wow fadeInDown" data-wow-delay=".5s">
         Demo txt
-      </p>
+      </p> -->
     </div>
     <div class="row">
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
           <div class="img-wrapper">
-            <img src="/source/images/demo.jpg" class="img-fluid" alt="this is a title">
+            <img src="/images/demo.jpg" class="img-fluid" alt="this is a title">
             <div class="overlay">
               <div class="buttons">
-                <a rel="gallery" class="fancybox" href="/source/images/demo.jpg">Demo</a>
+                <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
             </div>
           </div>
           <figcaption>
             <h4>
-              <a href="#">
+              <a href="#" style="text-decoration: none;">
                 1.	Easy customer enrollment 
               </a>
             </h4>
-            <p>
+            <!-- <p>
               Demo txt
-            </p>
+            </p> -->
           </figcaption>
         </figure>
       </div>
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
           <div class="img-wrapper">
-            <img src="/source/images/demo.jpg" class="img-fluid" alt="this is a title">
+            <img src="/images/demo.jpg" class="img-fluid" alt="this is a title">
             <div class="overlay">
               <div class="buttons">
-                <a rel="gallery" class="fancybox" href="/source/images/demo.jpg">Demo</a>
+                <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
             </div>
           </div>
           <figcaption>
             <h4>
-              <a href="#">
+              <a href="#" style="text-decoration: none;">
                2.	Multiple ways of earning points for customers
               </a>
             </h4>
-            <p>
+            <!-- <p>
               Demo txt
-            </p>
+            </p> -->
           </figcaption>
         </figure>
       </div>
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
           <div class="img-wrapper">
-            <img src="/source/images/demo.jpg" class="img-fluid" alt="">
+            <img src="/images/demo.jpg" class="img-fluid" alt="">
             <div class="overlay">
               <div class="buttons">
-                <a rel="gallery" class="fancybox" href="/source/images/demo.jpg">Demo</a>
+                <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
             </div>
           </div>
           <figcaption>
             <h4>
-              <a href="#">
+              <a href="#" style="text-decoration: none;">
                 3.	Define/tag your customers by their spending/visit habits
               </a>
             </h4>
-            <p>
+            <!-- <p>
               Demo txt
-            </p>
+            </p> -->
           </figcaption>
         </figure>
       </div>
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">
           <div class="img-wrapper">
-            <img src="/source/images/demo.jpg" class="img-fluid" alt="">
+            <img src="/images/demo.jpg" class="img-fluid" alt="">
             <div class="overlay">
               <div class="buttons">
-                <a rel="gallery" class="fancybox" href="/source/images/demo.jpg">Demo</a>
+                <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
             </div>
           </div>
           <figcaption>
             <h4>
-              <a href="#">
+              <a href="#" style="text-decoration: none;">
                 4.	Customizable look and feel for different businesses
               </a>
             </h4>
-            <p>
+            <!-- <p>
                Demo txt
-            </p>
+            </p> -->
           </figcaption>
         </figure>
       </div>
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="900ms">
           <div class="img-wrapper">
-            <img src="/source/images/demo.jpg" class="img-fluid" alt="">
+            <img src="/images/demo.jpg" class="img-fluid" alt="">
             <div class="overlay">
               <div class="buttons">
-                <a rel="gallery" class="fancybox" href="/source/images/demo.jpg">Demo</a>
+                <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
             </div>
           </div>
           <figcaption>
             <h4>
-              <a href="#">
+              <a href="#" style="text-decoration: none;">
                5.	Manage multiple locations easily
               </a>
             </h4>
-            <p>
+            <!-- <p>
               Demo txt
-            </p>
+            </p> -->
           </figcaption>
         </figure>
       </div>
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="1200ms">
           <div class="img-wrapper">
-            <img src="/source/images/demo.jpg" class="img-fluid" alt="">
+            <img src="/images/demo.jpg" class="img-fluid" alt="">
             <div class="overlay">
               <div class="buttons">
-                <a rel="gallery" class="fancybox" href="/source/images/demo.jpg">Demo</a>
+                <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
             </div>
           </div>
           <figcaption>
             <h4>
-              <a href="#">
+              <a href="#" style="text-decoration: none;">
               6.	Powerful analytics 
               </a>
             </h4>
-            <p>
+            <!-- <p>
              Demo txt
-            </p>
+            </p> -->
           </figcaption>
         </figure>
       </div>
@@ -339,9 +403,9 @@ Portfolio Section Start
   <div class="container">
     <div class="section-heading">
       <h1 class="title wow fadeInDown" data-wow-delay=".3s">What you get with Revords? </h1>
-      <p class="wow fadeInDown" data-wow-delay=".5s">
+      <!-- <p class="wow fadeInDown" data-wow-delay=".5s">
        Demo
-      </p>
+      </p> -->
     </div>
     <div class="row">
       <div class="col-sm-6 col-lg-6">
@@ -353,7 +417,7 @@ Portfolio Section Start
           </div>
           <div class="media-body">
             <h4 class="media-heading">User friendly marketing dashboard</h4>
-            <p>Demo</p>
+            <!-- <p>Demo</p> -->
           </div>
         </div>
       </div>
@@ -366,7 +430,7 @@ Portfolio Section Start
           </div>
           <div class="media-body">
             <h4 class="media-heading">Customer facing tablet </h4>
-            <p>Demo</p>
+            <!-- <p>Demo</p> -->
           </div>
         </div>
       </div>
@@ -377,9 +441,9 @@ Portfolio Section Start
               <i class="ion-ios-lightbulb-outline"></i>
             </div>
           </div>
-          <div class="media-body">
+          <div class="media-body justify-content-center">
             <h4 class="media-heading">Store manager/employee tablet</h4>
-            <p>Demo</p>
+            <!-- <p>Demo</p> -->
           </div>
         </div>
       </div>
@@ -392,7 +456,7 @@ Portfolio Section Start
           </div>
           <div class="media-body">
             <h4 class="media-heading">Free mobile app for store and customers</h4>
-            <p>Demo</p>
+            <!-- <p>Demo</p> -->
           </div>
         </div>
       </div>
@@ -427,7 +491,7 @@ Portfolio Section Start
 </section> <!-- /#feature -->
 
 
-<section id="vision_mission" style="padding: 80px 0;">
+<!-- <section id="vision_mission" style="padding: 80px 0;">
   <div class="container">
      <div class="row ">
     <div class="col-lg-6 col-md-12 first text-white">
@@ -443,12 +507,12 @@ Portfolio Section Start
       </div>
     </div>
     <div class="col-lg-6 col-md-12">
-      <img src="/source/images/vision_mission.png" class="p-5 w-100" alt="">
+      <img src="/images/vision_mission.png" class="p-5 w-100" alt="">
     </div>
   </div>
   <div class="row">
     <div class="col-lg-6 col-md-12">
-         <img src="/source/images/vision_mission.png" class="p-5 w-100" alt="">
+         <img src="/images/vision_mission.png" class="p-5 w-100" alt="">
     </div>
     <div class="col-lg-6 col-md-12 second text-white ">
      <div class="p-4">
@@ -462,7 +526,7 @@ Portfolio Section Start
 
   </div>
  
-</section>
+</section> -->
 
 
             <!--
@@ -475,8 +539,8 @@ Portfolio Section Start
                         <div class="col-md-12">
                             <div class="block">
                                 <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
-                                <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Demo txt</p>
-                                <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact With Me</a>
+                                <!-- <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Demo txt</p> -->
+                                <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
                             </div>
                         </div>
                         
@@ -500,22 +564,26 @@ Portfolio Section Start
                             <!-- Social Media -->
                             <ul class="social text-center text-md-right text-lg-right">
                                 <li>
-                                    <a href="http://wwww.fb.com/themefisher" class="Facebook">
+                                    <a href="
+                                    " class="Facebook">
                                         <i class="ion-social-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://wwww.twitter.com/themefisher" class="Twitter">
+                                    <a href="
+                                    " class="Twitter">
                                         <i class="ion-social-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="Linkedin">
+                                    <a href="
+                                    " class="Linkedin">
                                         <i class="ion-social-linkedin"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://wwww.fb.com/themefisher" class="Google Plus">
+                                    <a href="
+                                    " class="Google Plus">
                                         <i class="ion-social-googleplus"></i>
                                     </a>
                                 </li>
@@ -528,6 +596,9 @@ Portfolio Section Start
 	<!-- Template Javascript Files
 	================================================== -->
 	<!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	<script src="plugins/jQurey/jquery.min.js"></script>
 	<!-- Form Validation -->
     <script src="plugins/form-validation/jquery.form.js"></script> 
