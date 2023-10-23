@@ -273,7 +273,7 @@ a:hover {
 }
 
 #hero-area {
-  background: url("../images/slider.jpg") no-repeat 50%;
+  background: url("../images/homeSlider.jpg") no-repeat 50%;
   background-size: cover;
   background-attachment: fixed;
   padding: 230px 0;
@@ -571,14 +571,14 @@ figure figcaption p {
 #feature .icon {
   text-decoration: none;
   color: #fff;
-  background-color: #cf8e48;
+  /* background-color: #cf8e48; */
   height: 100px;
   text-align: center;
   width: 100px;
   font-size: 50px;
   line-height: 100px;
   overflow: hidden;
-  -webkit-border-radius: 50%;
+  /* -webkit-border-radius: 50%; */
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
@@ -608,6 +608,10 @@ figure figcaption p {
     #b77733 92px 92px, #b77733 93px 93px, #b77733 94px 94px, #b77733 95px 95px,
     #b77733 96px 96px, #b77733 97px 97px, #b77733 98px 98px, #b77733 99px 99px,
     #b77733 100px 100px;
+}
+
+#feature .icon img {
+  height: 100%;
 }
 
 .wrapper_404 h1 {
@@ -1165,7 +1169,7 @@ article {
   font-weight: 600;
 }
 #footer .social {
-  text-align: right;
+  /* text-align: right; */
   margin-bottom: 0;
 }
 #footer .social li {
@@ -1174,6 +1178,11 @@ article {
 }
 #footer .social li a {
   font-size: 22px;
+  color: #21303b;
+}
+
+#footer .footer_links .row .col ul li a {
+  text-decoration: none;
   color: #21303b;
 }
 
