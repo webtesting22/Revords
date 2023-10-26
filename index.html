@@ -22,7 +22,7 @@
         ================================================== -->
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Template CSS Files
         ================================================== -->
     <!-- Twitter Bootstrs CSS -->
@@ -69,7 +69,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
+                                <a class="nav-link" href="about.html">About&nbsp;Us</a>
                             </li>
                             <!-- <li class="nav-item">
                                 <a class="nav-link" href="service.html">Service</a>
@@ -97,7 +97,7 @@
                                 </div>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
+                                <a class="nav-link" href="contact.html">Contact&nbsp;Us</a>
                             </li>
                         </ul>
                     </div>
@@ -139,60 +139,54 @@ Slider Section Start
               data-wow-delay=".9s" href="" >Learn More</a> -->
 
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
               Learn More
             </button>
 
               <!-- Modal -->
               <div class="modal fade" style="z-index: 10000;" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <form action="">
-                        <div class="mb-3">
-                          <label for="fname" class="form-label">First Name</label>
-                          <input type="text" class="form-control" id="fname" placeholder="First Name">
-                        </div>
-                        <div class="mb-3">
-                          <label for="lname" class="form-label">Last Name</label>
-                          <input type="text" class="form-control" id="lname" placeholder="Last Name"></input>
-                        </div>
-                        <div class="mb-3">
-                          <label for="phone" class="form-label">Mobile Number</label>
-                          <input type="text" class="form-control" id="phone" placeholder="e.g.: 9876543210"></input>
-                        </div>
-                        <div class="mb-3">
-                          <label for="email" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="email" placeholder="e.g.: demo@gmail.com"></input>
-                        </div>
-                        <div class="mb-3">
-                          <label for="business" class="form-label">business</label>
-                          <input type="text" class="form-control" id="business" placeholder="e.g.: My Business LLP"></input>
-                        </div>
-                        <div class="mb-3">
-                          <label for="zip" class="form-label">business</label>
-                          <input type="text" class="form-control" id="zip" placeholder="zip code"></input>
-                        </div>
-                        <div class="mb-3">
-                          <label for="submit" class="form-label">Submit</label>
-                          <input type="button" class="form-control" id="submit" placeholder="Submit">Submit</input>
-                        </div>
-                        
-                        
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      
-                      <!-- <button type="button" class="btn btn-primary">Understood</button> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel"><span style="color: #b77733;">Ready</span> To Find Out More?</h1>
+        <button type="button" style="border: none; background: transparent;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i style="font-size: xx-large;" class="bi bi-x"></i></button>
+      </div>
+      <p class="pt-4 m-3" style="color: black;">Complete the short form below, and one of our team members will contact you shortly to take you through the ins and outs of the Revords platform.</p>
+      <div class="modal-body">
+        <form id="myForm">
+          <div class="mb-3">
+            <label for="fname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="fname" placeholder="First Name">
+          </div>
+          <div class="mb-3">
+            <label for="lname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lname" placeholder="Last Name">
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Mobile Number</label>
+            <input type="text" class="form-control" id="phone" placeholder="e.g.: 9876543210">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="e.g.: demo@gmail.com">
+          </div>
+          <div class="mb-3">
+            <label for="business" class="form-label">Business</label>
+            <input type="text" class="form-control" id="business" placeholder="e.g.: My Business LLP">
+          </div>
+          <div class="mb-3">
+            <label for="zip" class="form-label">Zip Code</label>
+            <input type="text" class="form-control" id="zip" placeholder="Zip Code">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="submitForm">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
 
         </div>
       </div>
@@ -241,7 +235,7 @@ Portfolio Section Start
 <section id="works" class="works">
   <div class="container">
     <div class="section-heading">
-      <h1 class="title wow fadeInDown" data-wow-delay=".3s">Why Revords </h1>
+      <h1 class="title wow fadeInDown" data-wow-delay=".3s">Why Revords ? </h1>
       <!-- <p class="wow fadeInDown" data-wow-delay=".5s">
         Demo txt
       </p> -->
@@ -249,15 +243,15 @@ Portfolio Section Start
     <div class="row">
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-          <!-- <div class="img-wrapper">
-            <img src="/images/demo.jpg" class="img-fluid" alt="this is a title">
-            <div class="overlay">
+          <div class="img-wrapper">
+            <img src="/images/Customer Enrolment.png" class="img-fluid" alt="this is a title">
+            <!-- <div class="overlay">
               <div class="buttons">
                 <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
-            </div>
-          </div> -->
+            </div> -->
+          </div>
           <figcaption>
             <h4>
               <a style="text-decoration: none;">
@@ -272,15 +266,15 @@ Portfolio Section Start
       </div>
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
-          <!-- <div class="img-wrapper">
-            <img src="/images/demo.jpg" class="img-fluid" >
-            <div class="overlay">
+          <div class="img-wrapper">
+            <img src="/images/Earning.png" class="img-fluid" >
+            <!-- <div class="overlay">
               <div class="buttons">
                 <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
-            </div>
-          </div> -->
+            </div> -->
+          </div>
           <figcaption>
             <h4>
               <a style="text-decoration: none;">
@@ -295,15 +289,15 @@ Portfolio Section Start
       </div>
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
-          <!-- <div class="img-wrapper">
-            <img src="/images/demo.jpg" class="img-fluid" >
-            <div class="overlay">
+          <div class="img-wrapper">
+            <img src="/images/spends.png" class="img-fluid" >
+            <!-- <div class="overlay">
               <div class="buttons">
                 <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
-            </div>
-          </div> -->
+            </div> -->
+          </div>
           <figcaption>
             <h4>
               <a style="text-decoration: none;">
@@ -318,15 +312,15 @@ Portfolio Section Start
       </div>
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">
-          <!-- <div class="img-wrapper">
-            <img src="/images/demo.jpg" class="img-fluid" alt="">
-            <div class="overlay">
+          <div class="img-wrapper">
+            <img src="/images/Customize.png" class="img-fluid" alt="">
+            <!-- <div class="overlay">
               <div class="buttons">
                 <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
-            </div>
-          </div> -->
+            </div> -->
+          </div>
           <figcaption>
             <h4>
               <a style="text-decoration: none;">
@@ -341,15 +335,15 @@ Portfolio Section Start
       </div>
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="900ms">
-          <!-- <div class="img-wrapper">
-            <img src="/images/demo.jpg" class="img-fluid" alt="">
-            <div class="overlay">
+          <div class="img-wrapper">
+            <img src="/images/locatins.png" class="img-fluid" alt="">
+            <!-- <div class="overlay">
               <div class="buttons">
                 <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
-            </div>
-          </div> -->
+            </div> -->
+          </div>
           <figcaption>
             <h4>
               <a style="text-decoration: none;">
@@ -364,15 +358,15 @@ Portfolio Section Start
       </div>
       <div class="col-md-4 col-sm-6">
         <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="1200ms">
-          <!-- <div class="img-wrapper">
-            <img src="/images/demo.jpg" class="img-fluid" alt="">
-            <div class="overlay">
+          <div class="img-wrapper">
+            <img src="/images/Powerful analysis.png" class="img-fluid" alt="">
+            <!-- <div class="overlay">
               <div class="buttons">
                 <a rel="gallery" class="fancybox" href="/images/demo.jpg">Demo</a>
                 <a target="_blank" href="">Details</a>
               </div>
-            </div>
-          </div> -->
+            </div> -->
+          </div>
           <figcaption>
             <h4>
               <a style="text-decoration: none;">
@@ -395,7 +389,7 @@ Portfolio Section Start
 <section id="feature">
   <div class="container">
     <div class="section-heading">
-      <h1 class="title wow fadeInDown" data-wow-delay=".3s">What you get with Revords? </h1>
+      <h1 class="title wow fadeInDown" data-wow-delay=".3s">What you get with Revords ? </h1>
       <!-- <p class="wow fadeInDown" data-wow-delay=".5s">
        Demo
       </p> -->
@@ -533,7 +527,7 @@ Portfolio Section Start
                             <div class="block">
                                 <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
                                 <!-- <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Demo txt</p> -->
-                                <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
+                                <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Connect With us</a>
                             </div>
                         </div>
                         
@@ -607,6 +601,14 @@ Portfolio Section Start
 	<!-- Template Javascript Files
 	================================================== -->
 	<!-- jquery -->
+
+  <script>
+  document.getElementById("submitForm").addEventListener("click", function () {
+    // Clear the form fields when the Submit button is clicked
+    document.getElementById("myForm").reset();
+  });
+</script>
+
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

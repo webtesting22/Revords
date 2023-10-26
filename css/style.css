@@ -28,7 +28,7 @@ h2 {
 p {
   font-family: "Roboto", sans-serif;
   line-height: 22px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -61,12 +61,13 @@ a:hover {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 35px;
   line-height: 1.1;
   font-weight: 300;
   color: #b77733;
   text-transform: uppercase;
   margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .subtitle {
@@ -173,13 +174,13 @@ a:hover {
 }
 
 .company-description {
-  margin-top: 80px;
+  margin-top: 20px;
 }
 .company-description .block h3 {
   margin-top: 0;
 }
 .company-description .block p {
-  color: #727272;
+  color: #212529;
 }
 
 /*=== MEDIA QUERY ===*/
@@ -373,7 +374,7 @@ a:hover {
 }
 
 #about {
-  padding: 110px 0;
+  padding: 40px 0;
 }
 #about .block {
   padding: 20px 30px 0 30px;
@@ -392,7 +393,7 @@ a:hover {
   margin-bottom: 35px;
 }
 #about .block img {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .about-feature {
@@ -468,6 +469,12 @@ figure .img-wrapper {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  padding: 10%;
+  text-align: center;
+}
+figure .img-wrapper img {
+  /* margin: auto; */
+  width: 50%;
 }
 figure img {
   transform: scale3d(1, 1, 1);
@@ -544,9 +551,9 @@ figure figcaption p {
   margin-top: 5px;
 }
 
-#feature {
+/* #feature {
   padding: 80px 0;
-}
+} */
 #feature .media {
   margin: 0px 0 70px 0;
 }
@@ -566,7 +573,7 @@ figure figcaption p {
   font-size: 18px;
   line-height: 25px;
   /* font-size: 14px; */
-  color: rgb(33, 48, 59);
+  color: #212529;
 }
 #feature .icon {
   text-decoration: none;
@@ -611,7 +618,7 @@ figure figcaption p {
 }
 
 #feature .icon img {
-  height: 100%;
+  height: 90%;
 }
 
 .wrapper_404 h1 {
@@ -1229,4 +1236,24 @@ ul.social-icons li {
   background-color: #21303b;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.mvbox {
+  text-align: center;
+}
+
+.mvimg {
+  width: 60%;
+}
+
+.abtCommitment {
+  text-align: right;
+}
+
+.abtCommitment img {
+  width: 55%;
+  margin-right: 5%;
+}
+.modal-title {
+  font-size: 35px;
+  text-transform: none;
 }
