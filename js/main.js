@@ -8,10 +8,7 @@
 (function ($) {
   "use strict";
 
-  document.getElementById("submitForm").addEventListener("click", function () {
-    // Clear the form fields when the Submit button is clicked
-    document.getElementById("myForm").reset();
-  });
+  
 
   $.fn.scrollingTo = function (opts) {
     var defaults = {

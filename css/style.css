@@ -332,7 +332,7 @@ a:hover {
   background: #21303b;
   background-size: cover;
   background-attachment: fixed;
-  padding: 80px 0;
+  padding: 40px 0;
   text-align: center;
   position: relative;
   color: #fff;
@@ -1256,4 +1256,8 @@ ul.social-icons li {
 .modal-title {
   font-size: 35px;
   text-transform: none;
+}
+
+.block .greySectionText {
+  font-size: 30px;
 }
