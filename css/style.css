@@ -378,6 +378,7 @@ a:hover {
 }
 #about .block {
   padding: 20px 30px 0 30px;
+  text-align: center;
 }
 #about .block h2 {
   color: #b77733;
