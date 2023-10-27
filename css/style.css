@@ -393,7 +393,7 @@ a:hover {
   margin-bottom: 35px;
 }
 #about .block img {
-  max-width: 80%;
+  max-width: 60%;
 }
 
 .about-feature {
@@ -537,6 +537,8 @@ figure figcaption {
   color: #666;
 }
 figure figcaption h4 {
+  margin: auto;
+  text-align: center;
   margin: 0;
 }
 figure figcaption h4 a {
@@ -1260,4 +1262,30 @@ ul.social-icons li {
 
 .block .greySectionText {
   font-size: 30px;
+}
+.modalBtn {
+  background-color: #b77733;
+  border-radius: 5px;
+  margin-top: 5px;
+  border: none;
+  font-size: large;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  border: 1px solid #21303b;
+}
+.modalBtn:hover {
+  color: white;
+  background-color: #21303b;
+  border: 1px solid white;
+}
+.whatWeDoImage {
+  height: 100px;
+  text-align: center;
+  width: 150px;
+  font-size: 50px;
+  line-height: 100px;
+}
+
+.whatWeDoImage img {
+  width: 100%;
 }
