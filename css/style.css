@@ -1258,8 +1258,11 @@ ul.social-icons li {
   margin-right: 5%;
 }
 .modal-title {
-  font-size: 35px;
+  font-size: 30px;
   text-transform: none;
+}
+.modalDescription{
+  font-size: 16px;
 }
 
 .block .greySectionText {
@@ -1272,7 +1275,7 @@ ul.social-icons li {
   border: none;
   font-size: large;
   padding: 10px 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border: 1px solid #21303b;
 }
 .modalBtn:hover {
