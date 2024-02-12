@@ -153,15 +153,15 @@
             <form id="contact-form"  action="https://formspree.io/f/myyqolrr" method="POST" role="form">
 
               <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
-                <input type="text" placeholder="Your Name" class="form-control" name="Name" >
+                <input type="text" placeholder="Your Name" class="form-control" name="Name" required>
               </div>
 
               <div class="form-group wow fadeInDown">
-                <input type="text" placeholder="Your Email" class="form-control" name="E-mail">
+                <input type="email" placeholder="Your Email" class="form-control" name="E-mail" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
               </div>
 
               <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
-                <input type="text" placeholder="Phone Number" class="form-control" name="Phone Number">
+                <input type="tel" placeholder="Phone Number" class="form-control" pattern="[0-9]{10,}" name="Phone Number">
               </div>
 
               <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
@@ -224,12 +224,12 @@
                   <p>info@revords.com</p>
                 </div>
               </div>
-              <div class="col-lg-12 col-sm-12">
+              <!-- <div class="col-lg-12 col-sm-12">
                 <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
                   <i class="ion-ios-telephone-outline"></i>
                   <p>224-520-3575</p>
                 </div>
-              </div>
+              </div> -->
             </div>
                   </div>
                 </div>
