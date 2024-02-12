@@ -157,40 +157,48 @@ Slider Section Start
                       data-bs-dismiss="modal" aria-label="Close"><i style="font-size: xx-large;"
                         class="bi bi-x"></i></button>
                   </div>
-                  <p class="pt-4 m-1 modalDescription" style="color: black;">Complete the short form below, and one of our team members
+                  <p class="pt-4 m-1 modalDescription" style="color: black;">Complete the short form below, and one of
+                    our team members
                     will contact you shortly to take you through the ins and outs of the Revords platform.</p>
                   <div class="modal-body pt-0">
-                    <form id="myform" action="https://formspree.io/f/mleyzaqy" method="POST">
+                    <!-- action="https://formspree.io/f/mleyzaqy" -->
+                    <form id="myform"  method="POST" onsubmit="return validateForm1()" novalidate>
                       <div class="row">
-                      <div class="col-lg-12 col-md-12">
-                        <div class="form-label formLabel"><span>Your Name*</span></div>
-                        <input type="text" class="form-control" name="Name" placeholder="Your Name" required>
-                      </div>
-                      <!-- <div class="col-lg-6 col-md-6">
+                        <div class="input-group px-2">
+                          <label class="form-label"><span>Your Name*</span></label>
+                          <input type="text" class="form-control w-100 " name="Name" placeholder="Your Name" required>
+                          <span class="formLabel formLabelResponsive" id="name-error" class="error-message"></span>
+                        </div>
+                        <!-- <div class="col-lg-6 col-md-6">
                         <label class="form-label">Last Name</label>
                         <input type="text" class="form-control" name="Last Name" placeholder="Last Name" required>
                       </div> -->
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 pt-2">
-                        <div class="form-label formLabel">Mobile Number</div>
-                        <input type="tel" class="form-control" name="Phone Number" pattern="[0-9]{10,}" placeholder="e.g.: 9876543210">
                       </div>
-                      <div class="col-lg-6 col-md-6 pt-2">
-                        <div class="form-label formLabel formLabel">Email*</div>
-                        <input type="email" class="form-control" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="e.g.: demo@gmail.com" required>
+                      <div class="row">
+                        <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
+                          <label class="form-label">Mobile Number</label>
+                          <input type="tel" class="form-control w-100" name="Phone Number" pattern="[0-9]{10,}"
+                            placeholder="e.g.: 9876543210">
+                            <span class="formLabel" id="phone-error" class="error-message"></span>
+                        </div>
+                        <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
+                          <label class="form-label formLabel">Email*</label>
+                          <input type="email" class="form-control w-100" name="E-mail"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="e.g.: demo@gmail.com"
+                            required>
+                            <span class="formLabel" id="email-error" class="error-message"></span>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 pt-2">
-                        <div for="business" class="form-label formLabel">Business</div>
-                        <input type="text" class="form-control" name="Business" placeholder="e.g.: My Business LLP">
+                      <div class="row">
+                        <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
+                          <label for="business" class="form-label">Business</label>
+                          <input type="text" class="form-control w-100" name="Business" placeholder="e.g.: My Business LLP">
+                        </div>
+                        <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
+                          <label for="zip" class="form-label">Zip Code</label>
+                          <input type="text" class="form-control w-100" name="Zip Code" placeholder="Zip Code">
+                        </div>
                       </div>
-                      <div class="col-lg-6 col-md-6 pt-2">
-                        <div for="zip" class="form-label formLabel">Zip Code</div>
-                        <input type="text" class="form-control" name="Zip Code" placeholder="Zip Code">
-                      </div>
-                    </div>
                       <button type="submit" class="modalBtn" id="submitForm">Request A Demo</button>
                     </form>
                   </div>
@@ -620,6 +628,42 @@ Portfolio Section Start
   <!-- Template Javascript Files
 	================================================== -->
   <!-- jquery -->
+  <script>
+    function validateForm1() {
+      var nameInput = document.forms["myform"]["Name"]
+      var emailInput = document.forms["myform"]["E-mail"];
+      var phoneInput = document.forms["myform"]["Phone Number"];
+
+      if (!nameInput.checkValidity()) {
+        document.getElementById("name-error").innerHTML = `<span style="font-size: 12px; color: #ff0000;">Please enter your name.</span>`;
+        return false;
+      } else {
+        document.getElementById("name-error").innerHTML = "";
+      }
+      if (!emailInput.checkValidity()) {
+        document.getElementById("email-error").innerHTML = `<span style="font-size: 12px; color: #ff0000;">Please enter a valid email address.<br>(eg: demoemail@demo.com)</span>`;
+        return false;
+      } else {
+        document.getElementById("email-error").innerHTML = "";
+      }
+
+      if (phoneInput.value !== "" && !phoneInput.checkValidity()) {
+        document.getElementById("phone-error").innerHTML = `<span style="font-size: 12px; color: #ff0000;">Please enter a valid phone number.<br>(eg: 2131231234)</span>`;
+        return false;
+      } else {
+        document.getElementById("phone-error").innerHTML = "";
+      }
+
+      // Additional validation for other fields if needed
+
+      showPopup(); // Call function to show popup
+      return true;
+    }
+
+    function showPopup() {
+      alert("Form submitted successfully!"); // You can replace this with your custom popup logic
+    }
+  </script>
 
   <script>
     document.getElementById("submitForm").addEventListener("click", function () {

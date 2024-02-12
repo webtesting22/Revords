@@ -352,20 +352,20 @@
         var phoneInput = document.forms["contact-form"]["Phone Number"];
 
         if (!nameInput.checkValidity()) {
-            document.getElementById("name-error").innerHTML = `<span style="font-size: 12px; color: '#222222'";>Please enter your name.</span>`;
+            document.getElementById("name-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter your name.</span>`;
             return false;
         } else {
             document.getElementById("name-error").innerHTML = "";
         }
         if (!emailInput.checkValidity()) {
-            document.getElementById("email-error").innerHTML = `<span style="font-size: 12px; color: '#222222'";>Please enter a valid email address.<br>(eg: demoemail@demo.com)</span>`;
+            document.getElementById("email-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter a valid email address.<br>(eg: demoemail@demo.com)</span>`;
             return false;
         } else {
             document.getElementById("email-error").innerHTML = "";
         }
 
         if (phoneInput.value !== "" && !phoneInput.checkValidity()) {
-            document.getElementById("phone-error").innerHTML = `<span style="font-size: 12px; color: '#222222'";>Please enter a valid phone number.<br>(eg: 2131231234)</span>`;
+            document.getElementById("phone-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter a valid phone number.<br>(eg: 2131231234)</span>`;
             return false;
         } else {
             document.getElementById("phone-error").innerHTML = "";

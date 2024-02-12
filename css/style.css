@@ -1261,13 +1261,42 @@ ul.social-icons li {
   font-size: 30px;
   text-transform: none;
 }
-.formLabel{
+.input-group{
+  display: flex;
+  flex-direction: column;
+}
+.input-group label{
+  padding-top: 10px;
+  color: #222222;
+  text-align: start;
+}
+.input-group span{
+  text-align: start;
+  color: #222222;
+}
+
+/* .formLabel{
   text-align: left;
   font-size: 12px;
   font-weight: 500;
   margin-left: 4px;
   color:#222222;
-}
+} */
+/* 
+@media (min-width: 575px) {
+  .formLabelResponsive{
+    margin-left: -325px;
+  }
+  
+} */
+
+/* @media (max-width: 280px) {
+  .formLabelResponsive{
+    margin-left: -105px;
+  }
+  
+} */
+
 .modalDescription{
   font-size: 16px;
 }
