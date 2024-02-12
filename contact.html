@@ -149,19 +149,24 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, ea!
             consectetur adipisicing elit. Dolore, ea!
           </p> -->
+
+          
           <div class="contact-form">
-            <form id="contact-form"  action="https://formspree.io/f/myyqolrr" method="POST" role="form">
+            <form id="contact-form" action="https://formspree.io/f/myyqolrr"  method="POST" role="form" onsubmit="return validateForm()" novalidate>
 
               <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
-                <input type="text" placeholder="Your Name" class="form-control" name="Name" required>
+                <input type="text" placeholder="Your Name*" class="form-control" name="Name" required>
+                <span id="name-error" class="error-message"></span>
               </div>
 
               <div class="form-group wow fadeInDown">
-                <input type="email" placeholder="Your Email" class="form-control" name="E-mail" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                <input type="email" placeholder="Your Email*" class="form-control" name="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <span id="email-error" class="error-message"></span>
               </div>
 
               <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
                 <input type="tel" placeholder="Phone Number" class="form-control" pattern="[0-9]{10,}" name="Phone Number">
+                <span id="phone-error" class="error-message"></span>
               </div>
 
               <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
@@ -322,6 +327,60 @@
 
 	<!-- Template Javascript Files
 	================================================== -->
+  <!-- <script>
+    $(document).ready(function() {
+        // Intercept form submission
+        $("#contact-form").submit(function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+  
+            // Your custom handling here (e.g., send data to Formspree using AJAX)
+            // ...
+  
+            // Show a popup message
+            alert("Form submitted successfully!");
+  
+            // Optionally, reset the form
+            this.reset();
+        });
+    });
+  </script> -->
+  <script>
+    function validateForm() {
+        var nameInput = document.forms["contact-form"]["Name"]
+        var emailInput = document.forms["contact-form"]["E-mail"];
+        var phoneInput = document.forms["contact-form"]["Phone Number"];
+
+        if (!nameInput.checkValidity()) {
+            document.getElementById("name-error").innerHTML = `<span style="font-size: 12px; color: '#222222'";>Please enter your name.</span>`;
+            return false;
+        } else {
+            document.getElementById("name-error").innerHTML = "";
+        }
+        if (!emailInput.checkValidity()) {
+            document.getElementById("email-error").innerHTML = `<span style="font-size: 12px; color: '#222222'";>Please enter a valid email address.<br>(eg: demoemail@demo.com)</span>`;
+            return false;
+        } else {
+            document.getElementById("email-error").innerHTML = "";
+        }
+
+        if (phoneInput.value !== "" && !phoneInput.checkValidity()) {
+            document.getElementById("phone-error").innerHTML = `<span style="font-size: 12px; color: '#222222'";>Please enter a valid phone number.<br>(eg: 2131231234)</span>`;
+            return false;
+        } else {
+            document.getElementById("phone-error").innerHTML = "";
+        }
+
+        // Additional validation for other fields if needed
+
+        showPopup(); // Call function to show popup
+        return true;
+    }
+
+    function showPopup() {
+        alert("Form submitted successfully!"); // You can replace this with your custom popup logic
+    }
+</script>
 
   
 	<!-- jquery -->
@@ -341,5 +400,6 @@
 	<script src="plugins/facncybox/jquery.fancybox.js"></script>
 	<!-- template main js -->
 	<script src="js/main.js"></script>
+  
  	</body>
 </html>
