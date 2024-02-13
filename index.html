@@ -42,6 +42,33 @@
   <link rel="stylesheet" href="plugins/hover/hover-min.css" />
   <!-- template main css file -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <script src="./js/script.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "V5PDmNspt0ZRWoxL3",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('myform').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 
   <style>
     .media {
@@ -182,12 +209,12 @@ Slider Section Start
                     our team members
                     will contact you shortly to take you through the ins and outs of the Revords platform.</p>
                   <div class="modal-body pt-0">
-                    <!-- action="https://formspree.io/f/mleyzaqy" -->
-                    <form id="myform"  method="POST" onsubmit="return validateForm1()" novalidate>
+                    <!-- action="https://formspree.io/f/mleyzaqy" method="POST" -->
+                    <form id="myform"  onsubmit="return validateForm1(event)" novalidate>
                       <div class="row">
                         <div class="input-group px-2">
                           <label class="form-label"><span>Your Name*</span></label>
-                          <input type="text" class="form-control w-100 " name="Name" placeholder="Your Name" required>
+                          <input type="text" class="form-control w-100 " id="name" name="Name" placeholder="Your Name" required>
                           <span class="formLabel formLabelResponsive" id="name-error" class="error-message"></span>
                         </div>
                         <!-- <div class="col-lg-6 col-md-6">
@@ -198,13 +225,13 @@ Slider Section Start
                       <div class="row">
                         <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
                           <label class="form-label">Mobile Number</label>
-                          <input type="tel" class="form-control w-100" name="Phone Number" pattern="[0-9]{10,}"
+                          <input type="tel" class="form-control w-100" id="contact" name="Phone Number" pattern="[0-9]{10,}"
                             placeholder="e.g.: 9876543210">
                             <span class="formLabel" id="phone-error" class="error-message"></span>
                         </div>
                         <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
                           <label class="form-label formLabel">Email*</label>
-                          <input type="email" class="form-control w-100" name="E-mail"
+                          <input type="email" class="form-control w-100" id="email" name="E-mail"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="e.g.: demo@gmail.com"
                             required>
                             <span class="formLabel" id="email-error" class="error-message"></span>
@@ -213,14 +240,14 @@ Slider Section Start
                       <div class="row">
                         <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
                           <label for="business" class="form-label">Business</label>
-                          <input type="text" class="form-control w-100" name="Business" placeholder="e.g.: My Business LLP">
+                          <input type="text" class="form-control w-100" id="company" name="Business" placeholder="e.g.: My Business LLP">
                         </div>
                         <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
                           <label for="zip" class="form-label">Zip Code</label>
-                          <input type="text" class="form-control w-100" name="Zip Code" placeholder="Zip Code">
+                          <input type="text" id="zip" class="form-control w-100" name="Zip Code" placeholder="Zip Code">
                         </div>
                       </div>
-                      <button type="submit" class="modalBtn" id="submitForm">Request A Demo</button>
+                      <button type="submit" class="modalBtn" onclick="homeModal()" id="submitForm">Request A Demo</button>
                     </form>
                   </div>
                 </div>
@@ -660,7 +687,7 @@ Portfolio Section Start
 	================================================== -->
   <!-- jquery -->
   <script>
-    function validateForm1() {
+    function validateForm1(event) {
       var nameInput = document.forms["myform"]["Name"]
       var emailInput = document.forms["myform"]["E-mail"];
       var phoneInput = document.forms["myform"]["Phone Number"];
@@ -685,15 +712,16 @@ Portfolio Section Start
         document.getElementById("phone-error").innerHTML = "";
       }
 
+      event.target.reset();
       // Additional validation for other fields if needed
 
-      showPopup(); // Call function to show popup
-      return true;
+      // showPopup(); // Call function to show popup
+      // return true;
     }
 
-    function showPopup() {
-      alert("Form submitted successfully!"); // You can replace this with your custom popup logic
-    }
+    // function showPopup() {
+    //   alert("Form submitted successfully!"); // You can replace this with your custom popup logic
+    // }
   </script>
 
   <script>
