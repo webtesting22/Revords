@@ -178,7 +178,8 @@
               </div>
 
               <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
-                <textarea rows="5" placeholder="Message" class="form-control" name="Message" ></textarea>
+                <textarea rows="5" placeholder="Message*" class="form-control" name="Message" required></textarea>
+                <span id="msg-error" class="error-message"></span>
               </div>
 
               <!-- <div id="success" class="success">
@@ -224,7 +225,7 @@
                 </div>
               </div> -->
               <div class="col-lg-12 col-sm-12">
-                <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
+                <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s" style="background: none;">
                   <i class="ion-ios-email-outline"></i>
                   <p>info@revords.com</p>
                 </div>
@@ -253,76 +254,79 @@
             Call To Action Section Start
             ================================================== -->
             <section id="call-to-action">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="block">
-                                <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
-                                <!-- <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p> -->
-                                <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Connect With us</a>
-                            </div>
-                        </div>
-                        
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="block">
+                      <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">HAVE ANY QUESTIONS ?
+                      </h1>
+                        <!-- <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Demo txt</p> -->
+                        <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s"
+                          data-wow-duration="500ms">Connect With us</a>
                     </div>
+                  </div>
+          
                 </div>
+              </div>
             </section>
 
             <!--
             ==================================================
             Footer Section Start
             ================================================== -->
-           <footer id="footer">
-                <div class="container footer_links">
-                  <div class="row">
-                    <div class="col">
-                      <h4>Company</h4>
-                      <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                      </ul>
-                    </div>
-                    <div class="col">
-                      <h4>Legal</h4>
-                      <ul>
-                        <li><a href="t&c.html">Terms & Conditions</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                      </ul>
-                    </div>
-                    <div class="col">
-                      <h4>Follow Us On</h4>
-                      <ul class="social">
-                                <li>
-                                    <a href="" class="Facebook">
-                                        <i class="ion-social-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="Twitter">
-                                        <i class="ion-social-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="Linkedin">
-                                        <i class="ion-social-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="Google Plus">
-                                        <i class="ion-social-googleplus"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                    </div>
+            <footer id="footer">
+              <div class="container footer_links">
+                <div class="row mx-auto">
+                  <div class="col text-center">
+                    <h4>Company</h4>
+                    <ul>
+                      <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                  <div class="col text-center">
+                    <h4>Legal</h4>
+                    <ul>
+                      <li><a href="t&c.html">Terms & Conditions</a></li>
+                      <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                  </div>
+                  <!-- <div class="col text-center">
+                    <h4>Follow Us On</h4>
+                    <ul class="social">
+                      <li>
+                        <a href="" class="Facebook">
+                          <i class="ion-social-facebook"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class="Twitter">
+                          <i class="ion-social-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class="Linkedin">
+                          <i class="ion-social-linkedin"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class="Google Plus">
+                          <i class="ion-social-googleplus"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div> -->
+                </div>
+              </div>
+              <div class="container pt-5">
+                <div class="row content-justify-between" style="align-items: center">
+                  <div class="col-md-12 col-12 text-center text-lg-center text-md-center">
+                    <p class="copyright">
+                      Copyright: Design and Developed by
+                      <a>Revords LLC</a> <br />
+                    </p>
                   </div>
                 </div>
-                <div class="container pt-5">
-                    <div class="row content-justify-between" style="align-items: center;">
-                        <div class="col-md-12 col-12 text-center text-lg-center text-md-center">
-                            <p class="copyright">Copyright: Design and Developed by <a href="https://outleadsolutions.com/" target="_blank">Outlead Solutions</a>. <br> 
-                                
-                            </p>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </footer> <!-- /#footer -->
 
 	<!-- Template Javascript Files
@@ -350,6 +354,7 @@
         var nameInput = document.forms["contact-form"]["Name"]
         var emailInput = document.forms["contact-form"]["E-mail"];
         var phoneInput = document.forms["contact-form"]["Phone Number"];
+        var msgInput = document.forms["contact-form"]["Message"]
 
         if (!nameInput.checkValidity()) {
             document.getElementById("name-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter your name.</span>`;
@@ -357,6 +362,7 @@
         } else {
             document.getElementById("name-error").innerHTML = "";
         }
+        
         if (!emailInput.checkValidity()) {
             document.getElementById("email-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter a valid email address.<br>(eg: demoemail@demo.com)</span>`;
             return false;
@@ -369,6 +375,13 @@
             return false;
         } else {
             document.getElementById("phone-error").innerHTML = "";
+        }
+
+        if (!msgInput.checkValidity()) {
+            document.getElementById("msg-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter your message.</span>`;
+            return false;
+        } else {
+            document.getElementById("msg-error").innerHTML = "";
         }
 
         // Additional validation for other fields if needed

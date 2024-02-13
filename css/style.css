@@ -8,8 +8,9 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Glegoo);
+@import url(https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap);
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Aptos", monospace;
 }
 
 h1,
@@ -18,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Aptos", monospace;
 }
 
 h2 {
@@ -26,7 +27,7 @@ h2 {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Aptos", monospace;
   line-height: 22px;
   font-size: 18px;
   font-weight: 300;
@@ -311,7 +312,7 @@ a:hover {
   line-height: 27px;
   text-transform: uppercase;
   color: #666;
-  font-family: "Roboto", sans-serif;
+  font-family: "Aptos", monospace;
   margin-top: 25px;
 }
 #hero-area .btn {
@@ -350,7 +351,7 @@ a:hover {
   font-size: 15px;
   color: #ffffff;
   font-weight: 300;
-  font-family: "Roboto", sans-serif;
+  font-family: "Aptos", monospace;
   margin-top: 20px;
 }
 #call-to-action .block .btn-contact {
@@ -658,7 +659,7 @@ article {
 }
 
 .blog-content h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Aptos", monospace;
 }
 .blog-content h2 a {
   color: #444;
