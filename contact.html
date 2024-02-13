@@ -8,71 +8,99 @@
 -->
 
 <html class="no-js">
-    <head>
-        <!-- Basic Page Needs
-        ================================================== -->
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="icon" href="./images/RevordsFavicon.png" type="image/png">
-        <title>Revords - Contact </title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
-        <!-- Mobile Specific Metas
-        ================================================== -->
-        <meta name="format-detection" content="telephone=no">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        
-        <!-- Template CSS Files
+<head>
+  <!-- Basic Page Needs
         ================================================== -->
-        <!-- Twitter Bootstrs CSS -->
-        <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-        <!-- Ionicons Fonts Css -->
-        <link rel="stylesheet" href="plugins/ionicons/ionicons.min.css">
-        <!-- animate css -->
-        <link rel="stylesheet" href="plugins/animate-css/animate.css">
-        <!-- Hero area slider css-->
-        <link rel="stylesheet" href="plugins/slider/slider.css">
-        <!-- slick slider -->
-        <link rel="stylesheet" href="plugins/slick/slick.css">
-        <!-- Fancybox -->
-        <link rel="stylesheet" href="plugins/facncybox/jquery.fancybox.css">
-        <!-- hover -->
-        <link rel="stylesheet" href="plugins/hover/hover-min.css">
-        <!-- template main css file -->
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="icon" href="./images/RevordsFavicon.png" type="image/png">
+  <title>Revords - Contact </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <!-- Mobile Specific Metas
+        ================================================== -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--
+
+  <!-- Template CSS Files
+        ================================================== -->
+  <!-- Twitter Bootstrs CSS -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- Ionicons Fonts Css -->
+  <link rel="stylesheet" href="plugins/ionicons/ionicons.min.css">
+  <!-- animate css -->
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <!-- Hero area slider css-->
+  <link rel="stylesheet" href="plugins/slider/slider.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="plugins/facncybox/jquery.fancybox.css">
+  <!-- hover -->
+  <link rel="stylesheet" href="plugins/hover/hover-min.css">
+  <!-- template main css file -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <script src="./js/script.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "V5PDmNspt0ZRWoxL3",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+  <!--
         ==================================================
         Header Section Start
         ================================================== -->
-<section class="top-bar animated-header">
+  <section class="top-bar animated-header">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="index.html" style="width: 79%;">
-                       <img src="./images/logo.png" alt="logo" style="width:32%;">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html" style="width: 79%;">
+              <img src="./images/logo.png" alt="logo" style="width:32%;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home
-                                    <span class="sr-only">(current)</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About&nbsp;Us</a>
-                            </li>
-                            <!-- <li class="nav-item">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About&nbsp;Us</a>
+                </li>
+                <!-- <li class="nav-item">
                                 <a class="nav-link" href="service.html">Service</a>
                             </li>
                             <li class="nav-item dropdown">
@@ -97,92 +125,95 @@
                                     <a class="dropdown-item" href="blog-right-sidebar.html">Blog Right sidebar</a>
                                 </div>
                             </li> -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact&nbsp;Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact&nbsp;Us</a>
+                </li>
+              </ul>
             </div>
+          </nav>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-        <!-- 
+  <!-- 
         ================================================== 
             Global Page Section Start
         ================================================== -->
-        <section class="global-page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="block">
-                            <h2 class="greySectionText pt-5">Reach Out To Us</h2>
-                            <ol class="breadcrumb list-inline text-center">
-                                <li class="list-inline-item">
-                                    <a href="index.html">
-                                        <i class="ion-ios-home"></i>
-                                        Home  &nbsp; &nbsp;/
-                                    </a>
-                                </li>
-                                <li class="active list-inline-item">Contact</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <section class="global-page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <h2 class="greySectionText pt-5">Reach Out To Us</h2>
+            <ol class="breadcrumb list-inline text-center">
+              <li class="list-inline-item">
+                <a href="index.html">
+                  <i class="ion-ios-home"></i>
+                  Home &nbsp; &nbsp;/
+                </a>
+              </li>
+              <li class="active list-inline-item">Contact</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-<!-- 
+  <!-- 
 ================================================== 
     Contact Section Start
 ================================================== -->
-<section id="contact-section">
-  <div class="container">
-    <!-- <div class="row justify-content-center"><h1 class="title wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Reach Out To Us</h1></div> -->
-    <div class="row">
-      <div class="col-md-6 mb-5 mb-md-0">
-        <div class="block">
-          <h2 class="subtitle wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Your Details</h2>
-          <!-- <p class="subtitle-des wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s">
+  <section id="contact-section">
+    <div class="container">
+      <!-- <div class="row justify-content-center"><h1 class="title wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Reach Out To Us</h1></div> -->
+      <div class="row">
+        <div class="col-md-6 mb-5 mb-md-0">
+          <div class="block">
+            <h2 class="subtitle wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Your Details</h2>
+            <!-- <p class="subtitle-des wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, ea!
             consectetur adipisicing elit. Dolore, ea!
           </p> -->
 
-          
-          <div class="contact-form">
-            <form id="contact-form" action="https://formspree.io/f/myyqolrr"  method="POST" role="form" onsubmit="return validateForm()" novalidate>
+          <!-- action="https://formspree.io/f/myyqolrr" method="POST" -->
+            <div class="contact-form">
+              <form id="contact-form"   role="form"
+                onsubmit="return validateForm(event)" novalidate>
 
-              <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
-                <input type="text" placeholder="Your Name*" class="form-control" name="Name" required>
-                <span id="name-error" class="error-message"></span>
-              </div>
+                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
+                  <input type="text" placeholder="Your Name*" id="name" class="form-control" name="Name" required>
+                  <span id="name-error" class="error-message"></span>
+                </div>
 
-              <div class="form-group wow fadeInDown">
-                <input type="email" placeholder="Your Email*" class="form-control" name="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                <span id="email-error" class="error-message"></span>
-              </div>
+                <div class="form-group wow fadeInDown">
+                  <input type="email" placeholder="Your Email*" class="form-control" name="E-mail" id="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                  <span id="email-error" class="error-message"></span>
+                </div>
 
-              <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
-                <input type="tel" placeholder="Phone Number" class="form-control" pattern="[0-9]{10,}" name="Phone Number">
-                <span id="phone-error" class="error-message"></span>
-              </div>
+                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
+                  <input type="tel" placeholder="Phone Number" class="form-control" pattern="[0-9]{10,}"
+                    name="Phone Number" id="contact">
+                  <span id="phone-error" class="error-message"></span>
+                </div>
 
-              <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
-                <input type="text" placeholder="Company" class="form-control" name="Company" >
-              </div>
+                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
+                  <input type="text" placeholder="Company" class="form-control" name="Company" id="company">
+                </div>
 
-              <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
-                <input type="text" placeholder="Title" class="form-control" name="Title" >
-              </div>
+                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
+                  <input type="text" placeholder="Title" class="form-control" name="Title" id="title">
+                </div>
 
-              <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
-                <textarea rows="5" placeholder="Message*" class="form-control" name="Message" required></textarea>
-                <span id="msg-error" class="error-message"></span>
-              </div>
+                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
+                  <textarea rows="5" placeholder="Message*" class="form-control" name="Message" id="message" required></textarea>
+                  <span id="msg-error" class="error-message"></span>
+                </div>
 
-              <!-- <div id="success" class="success">
+                <!-- <div id="success" class="success">
                 Thank you. The Mailman is on His Way :)
               </div>
 
@@ -190,26 +221,26 @@
                 Sorry, don't know what happened. Try later :(
               </div> -->
 
-              <div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.4s">
-                <button type="submit" id="contact-submit" class="btn btn-default btn-send hvr-bounce-to-right"
-                  value="Send Message">Send Message</button>
-              </div>
-            </form>
+                <div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.4s">
+                  <button type="submit" id="contact-submit" class="btn btn-default btn-send hvr-bounce-to-right"
+                    value="Send Message" onclick="SendMail()">Send Message</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="map-area">
-          
-          <!-- <p class="subtitle-des wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s">
+        <div class="col-md-6">
+          <div class="map-area">
+
+            <!-- <p class="subtitle-des wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s">
             Si aute quis eu proident o cupidatat ne anim nescius, et est praesentibus, o quorum vidisse expetendis,
             nostrud eram quibusdam ad nam nostrud ubi.
 
           </p> -->
-          <div class="map">
-           <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2963.171033512268!2d-88.06084912338132!3d42.03951265529178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880faf0cfff58c5b%3A0x991fb746b64cf3d6!2s657%20Kathy%20Ln%2C%20Schaumburg%2C%20IL%2060173%2C%20USA!5e0!3m2!1sen!2sin!4v1697714030459!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-            <div class="row address-details">
-              <!-- <div class="col-lg-4 col-sm-6">
+            <div class="map">
+              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2963.171033512268!2d-88.06084912338132!3d42.03951265529178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880faf0cfff58c5b%3A0x991fb746b64cf3d6!2s657%20Kathy%20Ln%2C%20Schaumburg%2C%20IL%2060173%2C%20USA!5e0!3m2!1sen!2sin!4v1697714030459!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+              <div class="row address-details">
+                <!-- <div class="col-lg-4 col-sm-6">
                 <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
                   <i class="ion-ios-location-outline"></i>
                     <h5>Revords LLC
@@ -218,79 +249,80 @@
                     </h5>
                 </div>
               </div> -->
-              <!-- <div class="col-lg-3 col-sm-6">
+                <!-- <div class="col-lg-3 col-sm-6">
                 <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
                   <i class="ion-ios-location-outline"></i>
                   <h5>125 , Kings Street,Melbourne <br>United Kingdom,600562</h5>
                 </div>
               </div> -->
-              <div class="col-lg-12 col-sm-12">
-                <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s" style="background: none;">
-                  <i class="ion-ios-email-outline"></i>
-                  <p>info@revords.com</p>
+                <div class="col-lg-12 col-sm-12">
+                  <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s"
+                    style="background: none;">
+                    <i class="ion-ios-email-outline"></i>
+                    <p>info@revords.com</p>
+                  </div>
                 </div>
-              </div>
-              <!-- <div class="col-lg-12 col-sm-12">
+                <!-- <div class="col-lg-12 col-sm-12">
                 <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
                   <i class="ion-ios-telephone-outline"></i>
                   <p>224-520-3575</p>
                 </div>
               </div> -->
-            </div>
-                  </div>
-                </div>
               </div>
             </div>
-      
-
-
-  </div>
-</section>
+          </div>
+        </div>
+      </div>
 
 
 
-            <!--
+    </div>
+  </section>
+
+
+
+  <!--
             ==================================================
             Call To Action Section Start
             ================================================== -->
-            <section id="call-to-action">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="block">
-                      <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">HAVE ANY QUESTIONS ?
-                      </h1>
-                        <!-- <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Demo txt</p> -->
-                        <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s"
-                          data-wow-duration="500ms">Connect With us</a>
-                    </div>
-                  </div>
-          
-                </div>
-              </div>
-            </section>
+  <section id="call-to-action">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">HAVE ANY QUESTIONS ?
+              </h1>
+              <!-- <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Demo txt</p> -->
+              <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s"
+                data-wow-duration="500ms">Connect With us</a>
+          </div>
+        </div>
 
-            <!--
+      </div>
+    </div>
+  </section>
+
+  <!--
             ==================================================
             Footer Section Start
             ================================================== -->
-            <footer id="footer">
-              <div class="container footer_links">
-                <div class="row mx-auto">
-                  <div class="col text-center">
-                    <h4>Company</h4>
-                    <ul>
-                      <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                  </div>
-                  <div class="col text-center">
-                    <h4>Legal</h4>
-                    <ul>
-                      <li><a href="t&c.html">Terms & Conditions</a></li>
-                      <li><a href="privacy.html">Privacy Policy</a></li>
-                    </ul>
-                  </div>
-                  <!-- <div class="col text-center">
+  <footer id="footer">
+    <div class="container footer_links">
+      <div class="row mx-auto">
+        <div class="col text-center">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col text-center">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="t&c.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <!-- <div class="col text-center">
                     <h4>Follow Us On</h4>
                     <ul class="social">
                       <li>
@@ -315,21 +347,21 @@
                       </li>
                     </ul>
                   </div> -->
-                </div>
-              </div>
-              <div class="container pt-5">
-                <div class="row content-justify-between" style="align-items: center">
-                  <div class="col-md-12 col-12 text-center text-lg-center text-md-center">
-                    <p class="copyright">
-                      Copyright: Design and Developed by
-                      <a>Revords LLC</a> <br />
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </footer> <!-- /#footer -->
+      </div>
+    </div>
+    <div class="container pt-5">
+      <div class="row content-justify-between" style="align-items: center">
+        <div class="col-md-12 col-12 text-center text-lg-center text-md-center">
+          <p class="copyright">
+            Copyright: Design and Developed by
+            <a>Revords LLC</a> <br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer> <!-- /#footer -->
 
-	<!-- Template Javascript Files
+  <!-- Template Javascript Files
 	================================================== -->
   <!-- <script>
     $(document).ready(function() {
@@ -350,69 +382,71 @@
     });
   </script> -->
   <script>
-    function validateForm() {
-        var nameInput = document.forms["contact-form"]["Name"]
-        var emailInput = document.forms["contact-form"]["E-mail"];
-        var phoneInput = document.forms["contact-form"]["Phone Number"];
-        var msgInput = document.forms["contact-form"]["Message"]
+    function validateForm(event) {
+      var nameInput = document.forms["contact-form"]["Name"]
+      var emailInput = document.forms["contact-form"]["E-mail"];
+      var phoneInput = document.forms["contact-form"]["Phone Number"];
+      var msgInput = document.forms["contact-form"]["Message"]
 
-        if (!nameInput.checkValidity()) {
-            document.getElementById("name-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter your name.</span>`;
-            return false;
-        } else {
-            document.getElementById("name-error").innerHTML = "";
-        }
-        
-        if (!emailInput.checkValidity()) {
-            document.getElementById("email-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter a valid email address.<br>(eg: demoemail@demo.com)</span>`;
-            return false;
-        } else {
-            document.getElementById("email-error").innerHTML = "";
-        }
+      if (!nameInput.checkValidity()) {
+        document.getElementById("name-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter your name.</span>`;
+        return false;
+      } else {
+        document.getElementById("name-error").innerHTML = "";
+      }
 
-        if (phoneInput.value !== "" && !phoneInput.checkValidity()) {
-            document.getElementById("phone-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter a valid phone number.<br>(eg: 2131231234)</span>`;
-            return false;
-        } else {
-            document.getElementById("phone-error").innerHTML = "";
-        }
+      if (!emailInput.checkValidity()) {
+        document.getElementById("email-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter a valid email address.<br>(eg: demoemail@demo.com)</span>`;
+        return false;
+      } else {
+        document.getElementById("email-error").innerHTML = "";
+      }
 
-        if (!msgInput.checkValidity()) {
-            document.getElementById("msg-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter your message.</span>`;
-            return false;
-        } else {
-            document.getElementById("msg-error").innerHTML = "";
-        }
+      if (phoneInput.value !== "" && !phoneInput.checkValidity()) {
+        document.getElementById("phone-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter a valid phone number.<br>(eg: 2131231234)</span>`;
+        return false;
+      } else {
+        document.getElementById("phone-error").innerHTML = "";
+      }
 
-        // Additional validation for other fields if needed
+      if (!msgInput.checkValidity()) {
+        document.getElementById("msg-error").innerHTML = `<span style="font-size: 12px; color: #ff0000";>Please enter your message.</span>`;
+        return false;
+      } else {
+        document.getElementById("msg-error").innerHTML = "";
+      }
 
-        showPopup(); // Call function to show popup
-        return true;
+      event.target.reset();
+      // Additional validation for other fields if needed
+
+      // showPopup(); // Call function to show popup
+      // return true;
     }
 
-    function showPopup() {
-        alert("Form submitted successfully!"); // You can replace this with your custom popup logic
-    }
-</script>
+    // function showPopup() {
+    //   alert("Form submitted successfully!"); // You can replace this with your custom popup logic
+    // }
+  </script>
 
-  
-	<!-- jquery -->
-	<script src="plugins/jQurey/jquery.min.js"></script>
-	<!-- Form Validation -->
-    <script src="plugins/form-validation/jquery.form.js"></script> 
-    <script src="plugins/form-validation/jquery.validate.min.js"></script>
-	<!-- slick slider -->
-	<script src="plugins/slick/slick.min.js"></script>
-	<!-- bootstrap js -->
-	<script src="plugins/bootstrap/bootstrap.min.js"></script>
-	<!-- wow js -->
-	<script src="plugins/wow-js/wow.min.js"></script>
-	<!-- slider js -->
-	<script src="plugins/slider/slider.js"></script>
-	<!-- Fancybox -->
-	<script src="plugins/facncybox/jquery.fancybox.js"></script>
-	<!-- template main js -->
-	<script src="js/main.js"></script>
-  
- 	</body>
+
+  <!-- jquery -->
+  <script src="plugins/jQurey/jquery.min.js"></script>
+  <!-- Form Validation -->
+  <script src="plugins/form-validation/jquery.form.js"></script>
+  <script src="plugins/form-validation/jquery.validate.min.js"></script>
+  <!-- slick slider -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- wow js -->
+  <script src="plugins/wow-js/wow.min.js"></script>
+  <!-- slider js -->
+  <script src="plugins/slider/slider.js"></script>
+  <!-- Fancybox -->
+  <script src="plugins/facncybox/jquery.fancybox.js"></script>
+  <!-- template main js -->
+  <script src="js/main.js"></script>
+
+</body>
+
 </html>
