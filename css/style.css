@@ -10,7 +10,8 @@
 @import url(http://fonts.googleapis.com/css?family=Glegoo);
 @import url(https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap);
 body {
-  font-family: "Aptos", monospace;
+  /* font-family: "Aptos", monospace; */
+  font-family: 'Courier New', monospace;
 }
 
 h1,
@@ -19,7 +20,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Aptos", monospace;
+  /* font-family: "Aptos", monospace; */
+  font-family: 'Courier New', monospace;
+  
 }
 
 h2 {
@@ -27,7 +30,8 @@ h2 {
 }
 
 p {
-  font-family: "Aptos", monospace;
+  /* font-family: "Aptos", monospace; */
+  font-family: 'Courier New', monospace;
   line-height: 22px;
   font-size: 18px;
   font-weight: 300;
@@ -312,7 +316,8 @@ a:hover {
   line-height: 27px;
   text-transform: uppercase;
   color: #666;
-  font-family: "Aptos", monospace;
+  /* font-family: "Aptos", monospace; */
+  font-family: 'Courier New', monospace;
   margin-top: 25px;
 }
 #hero-area .btn {
@@ -351,7 +356,8 @@ a:hover {
   font-size: 15px;
   color: #ffffff;
   font-weight: 300;
-  font-family: "Aptos", monospace;
+  /* font-family: "Aptos", monospace; */
+  font-family: 'Courier New', monospace;
   margin-top: 20px;
 }
 #call-to-action .block .btn-contact {
@@ -659,7 +665,8 @@ article {
 }
 
 .blog-content h2 {
-  font-family: "Aptos", monospace;
+  /* font-family: "Aptos", monospace; */
+  font-family: 'Courier New', monospace;
 }
 .blog-content h2 a {
   color: #444;
