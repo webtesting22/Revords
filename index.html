@@ -72,23 +72,24 @@
 
   <style>
     .media {
-  display: flex;
-  align-items: center;
-}
+      display: flex;
+      align-items: center;
+    }
 
-.whatWeDoImage {
-  margin-right: 10px; /* Adjust as needed to provide spacing between image and text */
-}
+    .whatWeDoImage {
+      margin-right: 10px;
+      /* Adjust as needed to provide spacing between image and text */
+    }
 
-.media-body {
-  display: flex;
-  flex-direction: column;
-}
+    .media-body {
+      display: flex;
+      flex-direction: column;
+    }
 
-h4.media-heading {
-  margin: 0; /* Remove default margin for better alignment */
-}
-
+    h4.media-heading {
+      margin: 0;
+      /* Remove default margin for better alignment */
+    }
   </style>
 </head>
 
@@ -181,7 +182,8 @@ Slider Section Start
             <!-- /.slider -->
             <div class="section-heading"></div>
             <h2 class="wow fadeInUp animated" data-wow-delay=".6s">
-              One stop customer loyalty program that will turn your visitors in to happy and loyal customers by digitalizing your business reward program!
+              One stop customer loyalty program that will turn your visitors in to happy and loyal customers by
+              digitalizing your business reward program!
 
 
             </h2>
@@ -210,11 +212,12 @@ Slider Section Start
                     will contact you shortly to take you through the ins and outs of the Revords platform.</p>
                   <div class="modal-body pt-0">
                     <!-- action="https://formspree.io/f/mleyzaqy" method="POST" -->
-                    <form id="myform"  onsubmit="return validateForm1(event)" novalidate>
+                    <form id="myform" onsubmit="return validateForm1(event)" novalidate>
                       <div class="row">
                         <div class="input-group px-2">
                           <label class="form-label"><span>Your Name*</span></label>
-                          <input type="text" class="form-control w-100 " id="name" name="Name" placeholder="Your Name" required>
+                          <input type="text" class="form-control w-100 " id="name" name="Name" placeholder="Your Name"
+                            required>
                           <span class="formLabel formLabelResponsive" id="name-error" class="error-message"></span>
                         </div>
                         <!-- <div class="col-lg-6 col-md-6">
@@ -225,29 +228,31 @@ Slider Section Start
                       <div class="row">
                         <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
                           <label class="form-label">Mobile Number</label>
-                          <input type="tel" class="form-control w-100" id="contact" name="Phone Number" pattern="[0-9]{10,}"
-                            placeholder="e.g.: 9876543210">
-                            <span class="formLabel" id="phone-error" class="error-message"></span>
+                          <input type="tel" class="form-control w-100" id="contact" name="Phone Number"
+                             placeholder="e.g.: 9876543210">
+                          <span class="formLabel" id="phone-error" class="error-message"></span>
                         </div>
                         <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
                           <label class="form-label formLabel">Email*</label>
                           <input type="email" class="form-control w-100" id="email" name="E-mail"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="e.g.: demo@gmail.com"
+                             placeholder="e.g.: demo@gmail.com"
                             required>
-                            <span class="formLabel" id="email-error" class="error-message"></span>
+                          <span class="formLabel" id="email-error" class="error-message"></span>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
                           <label for="business" class="form-label">Business</label>
-                          <input type="text" class="form-control w-100" id="company" name="Business" placeholder="e.g.: My Business LLP">
+                          <input type="text" class="form-control w-100" id="company" name="Business"
+                            placeholder="e.g.: My Business LLP">
                         </div>
                         <div class="input-group px-2 col-lg-6 col-md-6 col-sm-12">
                           <label for="zip" class="form-label">Zip Code</label>
                           <input type="text" id="zip" class="form-control w-100" name="Zip Code" placeholder="Zip Code">
                         </div>
                       </div>
-                      <button type="submit" class="modalBtn" onclick="homeModal()" id="submitForm">Request A Demo</button>
+                      <button type="submit" class="modalBtn" onclick="homeModal()" id="submitForm">Request A
+                        Demo</button>
                     </form>
                   </div>
                 </div>
@@ -368,7 +373,7 @@ Portfolio Section Start
               <h4>
                 <a style="text-decoration: none;">
                   Tag your customers
-by their visiting and spending habits
+                  by their visiting and spending habits
 
 
                 </a>
@@ -613,7 +618,7 @@ Portfolio Section Start
         <div class="col-md-12">
           <div class="block">
             <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">HAVE ANY QUESTIONS ?
-            </h1>
+              </h1>
               <!-- <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Demo txt</p> -->
               <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s"
                 data-wow-duration="500ms">Connect With us</a>
@@ -690,7 +695,10 @@ Portfolio Section Start
     function validateForm1(event) {
       var nameInput = document.forms["myform"]["Name"]
       var emailInput = document.forms["myform"]["E-mail"];
+      var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       var phoneInput = document.forms["myform"]["Phone Number"];
+      var phonePattern = /^(?:\(\d{3}\)|\d{3})[- ]?\d{3}[-. ]?\d{4}$/
+
 
       if (!nameInput.checkValidity()) {
         document.getElementById("name-error").innerHTML = `<span style="font-size: 12px; color: #ff0000;">Please enter your name.</span>`;
@@ -698,20 +706,34 @@ Portfolio Section Start
       } else {
         document.getElementById("name-error").innerHTML = "";
       }
-      if (!emailInput.checkValidity()) {
+      if (!emailInput.checkValidity() || !emailPattern.test(emailInput.value)) {
         document.getElementById("email-error").innerHTML = `<span style="font-size: 12px; color: #ff0000;">Please enter a valid email address.<br>(eg: demoemail@demo.com)</span>`;
         return false;
       } else {
         document.getElementById("email-error").innerHTML = "";
       }
 
-      if (phoneInput.value !== "" && !phoneInput.checkValidity()) {
-        document.getElementById("phone-error").innerHTML = `<span style="font-size: 12px; color: #ff0000;">Please enter a valid phone number.<br>(eg: 2131231234)</span>`;
+      if (phoneInput.value !== "" && (!phoneInput.checkValidity() || !phonePattern.test(phoneInput.value))) {
+        document.getElementById("phone-error").innerHTML = `<span style="font-size: 12px; color: #ff0000;">Please enter a valid phone number.<br>(e.g., (123) 456-7890, 123-456-7890, 1234567890)</span>`;
         return false;
       } else {
         document.getElementById("phone-error").innerHTML = "";
       }
 
+      // emailJS
+      var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        contact: document.getElementById("contact").value,
+        company: document.getElementById("company").value,
+        // title : document.getElementById("title").value,
+        zip: document.getElementById("zip").value
+      }
+      emailjs.send("service_0gba6iq", "template_bfi3xkp", params).then(function (res) {
+        alert("Your form is submitted successfully!")
+      })
+
+      // Form Data Reset
       event.target.reset();
       // Additional validation for other fields if needed
 
